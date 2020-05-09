@@ -1,0 +1,22 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/ib_src_repo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  table:
+    auto: update
+
+logging:
+  level:
+    org.boot.uploader.*: debug
+
+prop:
+  upload-folder: ./files
